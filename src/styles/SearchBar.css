@@ -1,0 +1,118 @@
+.input-wrapper {
+	background: #25252C;
+	width: 300px;
+	border-radius: 20px;
+	position: relative;
+	z-index: 1;
+	margin-right: 200px;
+}
+
+.search-container {
+	display: flex;
+	align-items: center;
+}
+
+.search-icon {
+	padding: 10px;
+	color: #00E5BC;
+}
+
+.input-search {
+	padding-right: 40px;
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	border-radius: 12px;
+	border: none;
+	outline: none;
+	overflow: hidden;
+	background: #25252C;
+	color: rgba(255, 255, 255, 0.90);
+	font-family: var(--font-roboto);
+	font-size: 14px;
+	font-style: normal;
+	font-weight: normal;
+	letter-spacing: 0.25px;
+	text-transform: none;
+	line-height: 18px;
+	caret-color: #00E5BC;
+}
+
+.clear-button {
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+	background: none;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+.suggestions-wrapper {
+	width: 100%;
+	position: absolute;
+	top: calc(100% + 8px);
+	left: 0;
+	z-index: 10;
+}
+
+.suggestions {
+	background-color: #25252C;
+	max-height: 400px;
+	overflow-y: auto;
+	border-radius: 20px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	position: absolute;
+	width: 100%;
+	z-index: 2;
+	scrollbar-width: thin;
+	scrollbar-color: #00E5BC #25252C;
+}
+
+.suggestions::-webkit-scrollbar {
+	width: 8px;
+}
+
+.suggestions::-webkit-scrollbar-track {
+	background: #25252C;
+}
+
+.suggestions::-webkit-scrollbar-thumb {
+	background-color: #00E5BC;
+	border-radius: 4px;
+}
+
+.suggestions.active {
+	display: block;
+}
+
+.suggestion {
+	padding: 10px;
+	color: rgba(255, 255, 255, 0.6);
+	font-family: var(--font-roboto);
+	font-weight: normal;
+	font-size: 14px;
+	font-style: normal;
+	letter-spacing: 0.25px;
+	text-transform: none;
+	line-height: 18px;
+	transition: color 0.3s ease 0s;
+	display: flex;
+	-webkit-box-align: center;
+	align-items: center;
+	flex-shrink: 0;
+	-webkit-box-pack: justify;
+	height: 40px;
+	padding: 10px 8px 10px 16px;
+	cursor: pointer;
+}
+
+.suggestion.selected {
+	background-color: #333;
+	font-family: 14px;
+}
+
+.suggestion:hover {
+	background-color: #444;
+}
