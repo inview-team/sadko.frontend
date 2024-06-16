@@ -28,4 +28,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: inviewteam/sadko_indexer:latest
+          tags: inviewteam/sadko_frontend:latest
