@@ -16,7 +16,7 @@ const SearchBar = ({ setVideoData, setSearchQuery }) => {
     setIsLoading(true);
     try {
         const response = await fetch(`${process.env.REACT_APP_SEARCH_API}/word/suggestions`, {
-            method: 'GET',
+            method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
@@ -103,7 +103,7 @@ const SearchBar = ({ setVideoData, setSearchQuery }) => {
     setSearchQuery(query);
     try {
         const response = await fetch(`${process.env.REACT_APP_SEARCH_API}/search`, {
-            method: 'GET',
+            method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
